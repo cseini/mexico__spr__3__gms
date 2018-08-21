@@ -31,7 +31,7 @@ public class HomeController {
 		session.setAttribute("context", context);
 		//model.addAttribute("context", "" );
 		
-		return "home";
+		return "main";
 	}
 	
 }
