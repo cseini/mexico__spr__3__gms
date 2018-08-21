@@ -22,11 +22,12 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 @SessionAttributes("context")
 public class HomeController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
+	//private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(HttpSession session, HttpServletRequest request) {
 		String context = request.getContextPath();
+		
 		logger.info("Welcome home! The Context Path is {}.",context);
 		session.setAttribute("context", context);
 		//model.addAttribute("context", "" );

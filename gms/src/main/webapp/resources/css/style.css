@@ -14,15 +14,6 @@ h1{
 	margin-bottom: 0;
 }
 html, body,table, #wrapper{padding: 0;margin: 0;padding: 0;border: 0;}
-/* unvisited link */
-a:link {color: black;}
-/* visited link */
-a:visited {color: green;}
-/* mouse over link */
-a:hover {color: #ff0000;font-size: 15px}
-/* selected link */
-a:active {color: blue;}
-/*common pages*/
 div#wrapper{
 	width: 90%;
 	padding-bottom: 0;
@@ -206,8 +197,37 @@ div#loginForm{
        width: 100%;
     }
 }
-/*------------------------------------------------------------------
-[ add_form ]*/
+/*--------------
+-- Grid Layout
+-- This grid layout contains six columns and three rows:
+---------------*/
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+/*--------------
+-- add_form
+---------------*/
 /* Full-width input fields */
 #add_form input[type=text],
 #add_form input[type=password] {
