@@ -32,7 +32,7 @@ public class HomeController {
 		session.setAttribute("context", context);
 		//model.addAttribute("context", "" );
 		
-		return "main";
+		return "common/main";
 	}
 	
 }

@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <title>Home</title>
 <link rel="shortcut icon" href="${context}/resources/img/favicon.ico" />
@@ -10,7 +9,7 @@
 <link rel="stylesheet" href="${context}/resources/css/style.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<script src="${context}/resources/js/app.js"></script>
+<%-- <script src="${context}/resources/js/app.js"></script> --%>
 </head>
 <body>
  <nav class="navbar navbar-inverse">
@@ -32,9 +31,9 @@
         <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
         <li><a href="#">Link</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">로그인 <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
+            <li><a id="login__btn" href="#">로그인</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
             <li class="divider"></li>
@@ -114,5 +113,20 @@
       <footer>
         <p>&copy; Company 2017</p>
       </footer>
+      <script>
+     /*  document.getElementById('login__btn')
+      .addEventListener('click',function(){
+    	  alert('로그인버튼 클릭');
+      }); */
+      $('#login__btn')
+      .on('click',function(){
+    	  alert('로그인 버튼 클릭 2');
+      });
+      </script>
 </body>
 </html>
+
+
+
+
+
