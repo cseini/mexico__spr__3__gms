@@ -31,8 +31,7 @@ public class HomeController {
 		logger.info("Welcome home! The Context Path is {}.",context);
 		session.setAttribute("context", context);
 		//model.addAttribute("context", "" );
-		
-		return "common/main";
+		return "public:common/content.tiles";
 	}
 	
 }
