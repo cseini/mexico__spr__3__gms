@@ -41,14 +41,11 @@
         <li><a href="#">Link</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-          		로그인 <span class="caret"></span>
+          		마이페이지 <span class="caret"></span>
           </a>
           <ul class="dropdown-menu" role="menu">
-            <li><a id="login__btn" href="#">로그인</a></li>
-            <li><a id="join__btn" href="#">회원가입</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            <li><a id="logout__btn" >로그아웃</a></li>
+            
           </ul>
         </li>
       </ul>

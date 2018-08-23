@@ -63,7 +63,6 @@ div#content{
 	padding: 15px 30px;
 	background-color: #ffffff;
 	margin-bottom: 30px;
-	height: 500px;
 	min-height: 400px;
 	color: black;
 	border: 3px solid black
@@ -141,16 +140,11 @@ div#title_box{background-color: #000}
 .page_box li{
     display:inline;
 }
-div#loginForm{
-	margin:0 auto;
-	width: 200px;
-}
 /*------------------------------------------------------------------
-[ login_form ]*/
+[ login__form ]*/
 
-#login_form {border: 3px solid #f1f1f1;}
-
-#login_form input[type=text], input[type=password] {
+#login__form {border: 3px solid #f1f1f1;}
+#login__form input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -158,7 +152,7 @@ div#loginForm{
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-#login_form .login_btn {
+#login__form .login__btn {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
@@ -168,7 +162,7 @@ div#loginForm{
     width: 100%;
 }
 
-#login_form button:hover {
+#login__form button:hover {
     opacity: 0.8;
 }
 
@@ -178,22 +172,22 @@ div#loginForm{
     background-color: #f44336;
 }
 
-#login_form .container {
+#login__form .container {
     padding: 16px;
 }
 
-#login_form span.psw {
+#login__form span.psw {
     float: right;
     padding-top: 16px;
 }
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
-    #login_form span.psw {
+    .login__form span.psw {
        display: block;
        float: none;
     }
-    #login_form .cancelbtn {
+    .login__form .cancelbtn {
        width: 100%;
     }
 }

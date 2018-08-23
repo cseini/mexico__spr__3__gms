@@ -11,27 +11,40 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-/**
- * Handles requests for the application home page.
- */
 @Controller
 @SessionAttributes("context")
 public class HomeController {
-	
-	//private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(HttpSession session, HttpServletRequest request) {
 		String context = request.getContextPath();
-		
-		logger.info("Welcome home! The Context Path is {}.",context);
-		session.setAttribute("context", context);
-		//model.addAttribute("context", "" );
+		logger.info("\n --------- Welcome {} !! ----------","Home");
+		session.setAttribute("context", context );
 		return "public:common/content.tiles";
+	}
+	@RequestMapping("/move/{prefix}/{dir}/{page}")
+	public String move(
+			@PathVariable String prefix,
+			@PathVariable String dir,
+			@PathVariable String page) {
+		logger.info("\n --------- HomeController {} !!--------","move()");
+		String path = prefix+":"+dir+"/"+page+".tiles";
+		logger.info("\n move page >>> {}",path);
+		return path;
 	}
 	
 }
+
+
+
+
+
+
+
+
+
